@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import Header from "./components/Header";
-import PowerLevels from "./components/PowerLevels";
+// import PowerLevels from "./components/PowerLevels";
 import TipList from "./components/TipList";
 import GuideList from "./components/GuideList";
 import Footer from "./components/Footer";
+import { BarChart } from "react-easy-chart";
 
 class App extends Component {
   constructor() {
@@ -52,7 +53,21 @@ class App extends Component {
     return (
       <main>
         <Header />
-        <PowerLevels />
+        {/* <PowerLevels /> */}
+        <BarChart
+          height={150}
+          width={350}
+          axisLabels={{ x: "Character", y: "Power Level" }}
+          data={[
+            { x: "A", y: 20 },
+            { x: "B", y: 30 },
+            { x: "C", y: 40 },
+            { x: "D", y: 20 },
+            { x: "E", y: 40 },
+            { x: "F", y: 25 },
+            { x: "G", y: 5 }
+          ]}
+        />
         <TipList tipList={tipList} onSave={this.onTipSave} />
         <GuideList guideList={guideList} getGuides={this.getGuides} />
         <Footer />
