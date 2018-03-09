@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Header from "./components/Header";
+import PowerLevels from "./components/PowerLevels";
 import TipList from "./components/TipList";
 import GuideList from "./components/GuideList";
 import Footer from "./components/Footer";
@@ -40,6 +41,10 @@ class App extends Component {
     this.getTips();
   };
 
+  onGuideSave = () => {
+    this.getGuides();
+  };
+
   render() {
     const tipList = this.state.tips;
     const guideList = this.state.guides;
@@ -47,8 +52,9 @@ class App extends Component {
     return (
       <main>
         <Header />
+        <PowerLevels />
         <TipList tipList={tipList} onSave={this.onTipSave} />
-        <GuideList guideList={guideList} onSave={this.getGuides} />
+        <GuideList guideList={guideList} getGuides={this.getGuides} />
         <Footer />
       </main>
     );

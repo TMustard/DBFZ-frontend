@@ -41,7 +41,7 @@ class TipList extends Component {
         <form action="#" onSubmit={this.createTip} className="hidden" method="POST">
           <label>Add a Tip: </label>
           <input type="textarea" ref="tip" />
-          <input type="submit" id="submit-button" name="" value="submit" />
+          <input type="submit" className="submit-button" name="" value="submit" />
         </form>
         <ul className="tip-list hidden">
           {this.props.tipList.map(tip => (

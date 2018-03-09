@@ -77,9 +77,10 @@ li {
   margin-top: 1rem;
 }
 
-#submit-button,
+.update-guide,
+.submit-button,
 #delete-tip,
-#submit-update {
+.submit-update {
   padding: 6px 15px;
   font-size: 0.8rem;
   text-align: center;
@@ -95,9 +96,10 @@ li {
   margin-left: 0.5rem;
 }
 
-#submit-button:active,
+.update-guide:active,
+.submit-button,
 #delete-tip:active,
-#submit-update:active {
+.submit-update:active {
   background-color: #3e8e41;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
