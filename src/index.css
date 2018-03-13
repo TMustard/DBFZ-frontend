@@ -97,7 +97,7 @@ li {
 }
 
 .update-guide:active,
-.submit-button,
+.submit-button:active,
 #delete-tip:active,
 .submit-update:active {
   background-color: #3e8e41;

@@ -11,7 +11,7 @@ class Form extends Component {
     event.preventDefault();
     let id = this.state.id;
     let guide = this.state.guide;
-    return fetch("http://localhost:3000/guides/" + id, {
+    return fetch("https://dbfz.herokuapp.com/guides/" + id, {
       method: "PUT",
       headers: {
         "Content-type": "application/json"

@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Header from "./components/Header";
-// import PowerLevels from "./components/PowerLevels";
 import TipList from "./components/TipList";
 import GuideList from "./components/GuideList";
 import Footer from "./components/Footer";
@@ -23,7 +22,7 @@ class App extends Component {
   }
 
   getTips = () => {
-    return fetch("http://localhost:3000/tips")
+    return fetch("https://dbfz.herokuapp.com/tips")
       .then(response => response.json())
       .then(tips => {
         this.setState(tips);
@@ -31,7 +30,7 @@ class App extends Component {
   };
 
   getGuides = () => {
-    return fetch("http://localhost:3000/guides")
+    return fetch("https://dbfz.herokuapp.com/guides")
       .then(response => response.json())
       .then(guides => {
         this.setState(guides);
@@ -53,8 +52,7 @@ class App extends Component {
     return (
       <main>
         <Header />
-        {/* <PowerLevels /> */}
-        <BarChart
+        {/* <BarChart
           height={150}
           width={350}
           axisLabels={{ x: "Character", y: "Power Level" }}
@@ -67,7 +65,7 @@ class App extends Component {
             { x: "F", y: 25 },
             { x: "G", y: 5 }
           ]}
-        />
+        /> */}
         <TipList tipList={tipList} onSave={this.onTipSave} />
         <GuideList guideList={guideList} getGuides={this.getGuides} />
         <Footer />

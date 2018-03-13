@@ -9,7 +9,7 @@ class TipList extends Component {
   createTip = event => {
     console.log(this.state);
     event.preventDefault();
-    fetch("http://localhost:3000/tips", {
+    fetch("https://dbfz.herokuapp.com/tips", {
       method: "POST",
       headers: {
         "Content-type": "application/json"
@@ -23,7 +23,7 @@ class TipList extends Component {
   };
 
   removeTip = id => {
-    return fetch("http://localhost:3000/tips/" + id, {
+    return fetch("https://dbfz.herokuapp.com/tips/" + id, {
       method: "DELETE"
     })
       .then(response => response.text)
