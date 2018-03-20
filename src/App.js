@@ -52,20 +52,19 @@ class App extends Component {
     return (
       <main>
         <Header />
-        {/* <BarChart
-          height={150}
-          width={350}
-          axisLabels={{ x: "Character", y: "Power Level" }}
-          data={[
-            { x: "A", y: 20 },
-            { x: "B", y: 30 },
-            { x: "C", y: 40 },
-            { x: "D", y: 20 },
-            { x: "E", y: 40 },
-            { x: "F", y: 25 },
-            { x: "G", y: 5 }
-          ]}
-        /> */}
+        <form action="your-server-side-code" method="POST">
+          <script
+            src="https://localhost:3000"
+            className="stripe-button"
+            data-key="pk_test_6pRNASCoBOKtIshFeQd4XMUh"
+            data-amount="999"
+            data-name="Stripe.com"
+            data-description="Widget"
+            data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+            data-locale="auto"
+            data-zip-code="true"
+          />
+        </form>
         <TipList tipList={tipList} onSave={this.onTipSave} />
         <GuideList guideList={guideList} getGuides={this.getGuides} />
         <Footer />
