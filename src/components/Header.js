@@ -9,9 +9,6 @@ export default function Header() {
       <div className="title-wrapper">
         <img className="dbfz-logo" src="./logo.png" alt="dbfz-logo" />
         <a>About</a>
-        <a href ="https://stripe-investigators.herokuapp.com/">
-        Donate
-      </a>
       </div>
     </div>
   );

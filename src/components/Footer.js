@@ -8,6 +8,7 @@ export default function Footer() {
         <a href ="https://stripe-investigators.herokuapp.com/">
         Donate
       </a>
+      <p>Hi</p>
       </div>
     </div>
   );
