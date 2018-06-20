@@ -10,7 +10,6 @@ export default function Header() {
         <img className="dbfz-logo" src="./logo.png" alt="dbfz-logo" />
         <a>About</a>
       </div>
-
-    </div>
+  </div>
   );
 }

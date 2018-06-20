@@ -7,7 +7,6 @@ class TipList extends Component {
   };
 
   createTip = event => {
-    console.log(this.state);
     event.preventDefault();
     fetch("https://dbfz.herokuapp.com/tips", {
       method: "POST",
